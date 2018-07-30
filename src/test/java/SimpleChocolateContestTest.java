@@ -76,7 +76,6 @@ public class SimpleChocolateContestTest {
 
     @Test
     public void testOutputsEmptyTableIfNoSales() {
-        System.out.println(chocolateContest.hashCode());
         String expectedCSV = "Salesman,Candy Bars Sold,Top Salesman";
         assertEquals(reportAsString(chocolateContest).trim(), expectedCSV, "Should have output only the header");
     }
@@ -122,7 +121,6 @@ public class SimpleChocolateContestTest {
         final PrintWriter printWriter = new PrintWriter(stringWriter);
         thisChocolateContest.printSalesRanking(printWriter);
         printWriter.flush();
-        System.out.println(thisChocolateContest.hashCode());
         return stringWriter.toString().trim();
     }
 
